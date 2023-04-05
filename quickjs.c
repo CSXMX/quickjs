@@ -33691,6 +33691,7 @@ static JSValue JS_EvalInternal(JSContext *ctx, JSValueConst this_obj,
     if (unlikely(!ctx->eval_internal)) {
         return JS_ThrowTypeError(ctx, "eval is not supported");
     }
+    
     return ctx->eval_internal(ctx, this_obj, input, input_len, filename,
                               flags, scope_idx);
 }
